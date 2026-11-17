@@ -1,13 +1,13 @@
 # Multi-Node kind Cluster
 
-A local Kubernetes cluster with 1 control-plane and 3 worker nodes (`control-plane-1`, `worker-1`, `worker-2`, `worker-3`), defined in [`kind-config.yaml`](kind-config.yaml).
+A local Kubernetes cluster with 1 control-plane and 3 worker nodes (`control-plane-1`, `worker-1`, `worker-2`, `worker-3`), defined in [`kind-config.yml`](kind-config.yml).
 
 Run all commands from this directory.
 
 ## Create the cluster
 
 ```powershell
-kind create cluster --name kind --config .\kind-config.yaml
+kind create cluster --name kind --config .\kind-config.yml
 kubectl cluster-info --context kind-kind
 ```
 
@@ -31,7 +31,7 @@ kubectl get nodes
 
 ```powershell
 kind delete cluster --name kind
-kind create cluster --name kind --config .\kind-config.yaml
+kind create cluster --name kind --config .\kind-config.yml
 ```
 
 ## Delete the cluster

@@ -1,12 +1,17 @@
+# kind cluster with 1 control-plane node and 3 worker nodes.
+# Each node gets a fixed name through kubeadmConfigPatches so kubectl
+# commands (e.g. labeling workers) can refer to nodes by name.
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
+  # Control-plane node. InitConfiguration applies to the node that bootstraps the cluster.
   - role: control-plane
     kubeadmConfigPatches:
       - |
         kind: InitConfiguration
         nodeRegistration:
           name: control-plane-1
+  # Worker nodes. JoinConfiguration applies to nodes joining the existing cluster.
   - role: worker
     kubeadmConfigPatches:
       - |
