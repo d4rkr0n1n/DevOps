@@ -15,3 +15,8 @@
 - Work inside
 - Config and context
 - Check it worked
+## Day 34: Describe | Intermediate
+- Sections to read in a pod's output
+- Sections to read in a node's output
+## Day 35: Logs | Intermediate
+- Advanced with labels
